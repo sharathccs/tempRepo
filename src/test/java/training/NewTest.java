@@ -11,6 +11,5 @@ public class NewTest {
 	  System.out.println("ljlj");
 	  Assert.assertEquals("test1","test1");
 	  
-	  
   }
 }

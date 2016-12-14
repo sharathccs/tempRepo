@@ -1,10 +1,13 @@
 package e2eTests;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -22,7 +25,15 @@ public class Shipwreck_e2e_test_2 {
 	
 	@BeforeMethod
 	public void beforeMethod() throws Exception { 
-			driver = new FirefoxDriver();
+		
+			File pathToBinary = new File("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+			FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
+			FirefoxProfile firefoxProfile = new FirefoxProfile();       
+			//WebDriver driver = new FirefoxDriver(ffBinary,firefoxProfile)
+		
+		
+		
+			driver = new FirefoxDriver(ffBinary,firefoxProfile);
 			logger.info("New driver instantiated");
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			logger.info("Implicit wait applied on the driver for 10 seconds");

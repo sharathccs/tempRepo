@@ -5,6 +5,7 @@
 	<test name="sanitytest_">
 	<classes>
 			<class name="training.NewTest" />
+			<class name="e2eTests.Shipwreck_e2e_test_2" />
 		</classes>
 	</test>
 	

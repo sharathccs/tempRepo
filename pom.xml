@@ -77,6 +77,7 @@
                     <!-- Suite testng xml file to consider for test execution -->
                     <suiteXmlFiles>
                         <suiteXmlFile>testsuite.xml</suiteXmlFile>
+                        
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
@@ -90,66 +91,7 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
-  
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>xml-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>transform</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <transformationSets>
-                        <transformationSet>
-                            <dir>target/surefire-reports</dir>
-                            <excludes>
-                                <exclude>TEST-TestSuite.xml</exclude>
-                            </excludes>
-                            <excludes>
-                                <exclude>testng-failed.xml</exclude>
-                            </excludes>
-                            <includes>
-                                <include>testng-results.xml</include>
-                            </includes>
-                            <stylesheet>src/test/resources/testng-results.xsl</stylesheet>
-                            <parameters>
-                                <parameter>
-                                    <name>testNgXslt.outputDir</name>
-                                    <value>${basedir}/target/surefire-reports/xslt</value>
-                                </parameter>
-                                <parameter>
-                                    <name>testNgXslt.sortTestCaseLinks</name>
-                                    <value>true</value>
-                                </parameter>
-                                <parameter>
-                                    <name>testNgXslt.testDetailsFilter</name>
-                                    <value>FAIL,SKIP,PASS,CONF,BY_CLASS</value>
-                                </parameter>
-                                <parameter>
-                                    <name>testNgXslt.showRuntimeTotals</name>
-                                    <value>true</value>
-                                </parameter>
-                            </parameters>
-                        </transformationSet>
-                        <!--transformationSet><dir>target/surefire-reports/xslt</dir><includes><include>*.xml</include></includes><stylesheet>target/test-classes/Results.xsl</stylesheet><fileMappers><fileMapper 
-                            implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper"><targetExtension>.html</targetExtension></fileMapper></fileMappers><outputDir>target/surefire-reports/xslt</outputDir></transformationSet -->
-                    </transformationSets>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>net.sf.saxon</groupId>
-                        <artifactId>saxon</artifactId>
-                        <version>8.7</version>
-                    </dependency>
-                    
-                </dependencies>
-            </plugin>
-  
-        </plugins>
+          </plugins>
     </build>
 	
 </project>

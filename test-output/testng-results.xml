@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="17845" started-at="2016-12-14T15:02:35Z" finished-at="2016-12-14T15:02:53Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="17845" started-at="2016-12-14T15:02:35Z" finished-at="2016-12-14T15:02:53Z">
+      <class name="e2eTests.Shipwreck_e2e_test_2">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:e2eTests.Shipwreck_e2e_test_2@7302d823]" name="beforeMethod" is-config="true" duration-ms="3744" started-at="2016-12-14T20:32:35Z" finished-at="2016-12-14T20:32:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="AddShipWreckTest()[pri:0, instance:e2eTests.Shipwreck_e2e_test_2@7302d823]" name="AddShipWreckTest" duration-ms="13555" started-at="2016-12-14T20:32:39Z" finished-at="2016-12-14T20:32:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddShipWreckTest -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:e2eTests.Shipwreck_e2e_test_2@7302d823]" name="afterMethod" is-config="true" duration-ms="518" started-at="2016-12-14T20:32:52Z" finished-at="2016-12-14T20:32:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- e2eTests.Shipwreck_e2e_test_2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

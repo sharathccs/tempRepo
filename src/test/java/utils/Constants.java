@@ -29,8 +29,11 @@ public class Constants{
 	public static final String  ViewNewShipwreck_Longitude= "13";
 	
 	
-	public static final String  Path_TestData = "";
+	public static final String  Path_TestData = "C:\\Sharath\\Official\\DevOpsTraining_13Dec2016\\Project\\src\\test\\resources\\data\\";
+	public static final String File_TestData = "TestData.xlsx";
 	
 	
-
+	public static final String  pathToFFBinary= "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+	public static final String  pathToChromeBinary= "C:\\chromedriver.exe";
+	
 }
